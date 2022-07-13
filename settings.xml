@@ -34,5 +34,23 @@
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
+  
+  <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://myserver:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
 
 </settings>
